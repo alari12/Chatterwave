@@ -3,28 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatterWave</title>
+  <title>ChatterWave - Sign Up</title>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+  <!-- Your custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Hero Section -->
-  <div class="hero">
-    <div class="container">
-      <h1 class="logo">ChatterWave</h1>
-      <p>Welcome to the future of social connection. Redefine how you connect, vibe, and grow.</p>
-      <div class="cta-buttons">
-        <a href="signup.html" class="btn">Join Now</a>
-        <a href="login.html" class="btn btn-alt">Log In</a>
-      </div>
-    </div>
+  <div class="container">
+    <h1>ChatterWave - Sign Up</h1>
+    <form id="registerForm">
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <input type="password" id="password" placeholder="Enter your password" required />
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Log in here</a></p>
   </div>
-  
-  <!-- Footer Section -->
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 ChatterWave. All Rights Reserved.</p>
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
