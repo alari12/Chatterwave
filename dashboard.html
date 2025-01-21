@@ -4,47 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChatterWave - Dashboard</title>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to ChatterWave!</h1>
-    <p>Your dashboard is ready.</p>
-    <button onclick="logout()">Log Out</button>
+    <h1>Welcome to Your Dashboard</h1>
+    <p>Here you can see your feeds, interact with posts, and chat with others.</p>
+    
+    <div id="feed">
+      <!-- This can be populated with dynamic content like posts from users or updates -->
+      <p>Feed content will appear here...</p>
+    </div>
+
+    <button onclick="window.location.href='profile.html'">Create Profile</button> <!-- Link to profile page -->
   </div>
-
-  <script>
-    // Firebase Configuration (same as before)
-    const firebaseConfig = {
-      apiKey: "your-api-key",
-      authDomain: "your-auth-domain",
-      projectId: "your-project-id",
-      storageBucket: "your-storage-bucket",
-      messagingSenderId: "your-sender-id",
-      appId: "your-app-id"
-    };
-
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-
-    // Log out function
-    function logout() {
-      auth.signOut().then(() => {
-        window.location.href = "login.html"; // Redirect to login page
-      }).catch((error) => {
-        console.error("Error during logout:", error);
-      });
-    }
-
-    // Check if user is logged in
-    auth.onAuthStateChanged((user) => {
-      if (!user) {
-        window.location.href = "login.html"; // Redirect to login if not logged in
-      }
-    });
-  </script>
 </body>
 </html>
