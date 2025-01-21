@@ -3,22 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatterWave - Sign Up</title>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <title>ChatterWave - Home</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
 </head>
 <body>
   <div class="container">
-    <h1>ChatterWave - Sign Up</h1>
-    <form id="registerForm">
-      <input type="text" id="username" placeholder="Enter your username" required />
-      <input type="password" id="password" placeholder="Enter your password" required />
-      <button type="submit">Register</button>
-    </form>
-    <p>Already have an account? <a href="login.html">Log in here</a></p>
+    <h1>Welcome to ChatterWave</h1>
+    <p>Start exploring the social world!</p>
+    <button onclick="window.location.href='dashboard.html'">Go to Dashboard</button> <!-- Direct access to Dashboard -->
+    <p>Want to personalize your experience? <a href="profile.html">Create your profile</a></p> <!-- Optional profile creation -->
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
