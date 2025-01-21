@@ -33,7 +33,6 @@
     // Log out function
     function logout() {
       auth.signOut().then(() => {
-        console.log("Logged out successfully!");
         window.location.href = "login.html"; // Redirect to login page
       }).catch((error) => {
         console.error("Error during logout:", error);
