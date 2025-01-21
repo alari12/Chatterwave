@@ -1,4 +1,4 @@
-// Firebase Configuration (use the same one as in sign-up)
+// Firebase Configuration (same as before)
 const firebaseConfig = {
   apiKey: "your-api-key",
   authDomain: "your-auth-domain",
@@ -13,17 +13,15 @@ const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
 // Log In Function
-function logIn(email, password) {
-  auth.signInWithEmailAndPassword(email, password)
+function logIn(username, password) {
+  auth.signInWithEmailAndPassword(username + "@chatterwave.com", password) // Fake email using username
     .then((userCredential) => {
       const user = userCredential.user;
-      console.log("Logged in:", user);
       window.location.href = "/dashboard.html"; // Redirect to dashboard
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.error("Error during login:", errorCode, errorMessage);
       alert("Error: " + errorMessage);
     });
 }
@@ -31,7 +29,7 @@ function logIn(email, password) {
 // Handle Form Submission
 document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  const email = document.getElementById("email").value;
+  const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
-  logIn(email, password);
+  logIn(username, password);
 });
